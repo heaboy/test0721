@@ -1,0 +1,59 @@
+数据库：
+1、创建数据库：create database 数据库名;
+2、删除数据库：drop database 数据库名;
+3、选择数据库：use 数据库名;
+其他：查看数据库有哪些表(show tables;),查看数据库某表的格式(describe 数据表名)
+
+数据表
+4、创建数据表：
+create table 数据表名(
+	字段名1 字段类型1,
+	字段名2 字段类型2,
+	......
+	primary key(主键字段名)
+);
+其他：id int unsigned auto_increment代表自增，常用于主键
+5、删除数据表:
+drop table 数据表名;
+6、插入数据：
+insert into 数据表名(字段名1, 字段名2....) 
+values(值1, 值2...);
+7、查询数据：
+select 字段名1,字段名2... 
+from 数据表名 
+where 条件
+8、更新数据
+update 数据表名 set 字段名1 = 新值1, 字段名2=新值2
+where 条件
+9、删除数据
+delete from 数据表名
+where 条件
+
+10、排序
+order by 字段名;
+asc代表升序，desc代表降序；默认为升序。
+
+11、分组
+select 字段名, function(字段名)
+from 数据表名
+group by 字段名;
+
+12、连接的使用
+分为三种：inner join(内连接或等值连接)、left join(左连接)、right join(右连接)
+select 字段名1、字段名2...
+from 数据表1 inner join 数据表2
+on 数据表1.字段名 = 数据表2.字段名
+
+13、修改数据表
+1）增加字段：
+alter table 数据表名 add 字段名 字段类型 （可选：位置）;
+位置例如：first、after 字段名1；
+2）删除字段：
+alter table 数据表名 drop 字段名;
+3）修改字段类型及名称
+仅修改字段类型：alter table 数据表名 modify 字段名 新字段类型;
+修改字段类型及名称：alter table 数据表名 change 字段名 新字段名 新字段类型;
+
+
+
+
